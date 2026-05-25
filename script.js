@@ -8,5 +8,9 @@ async function weather() {
     const c = data.main.temp - 273.15
     const icon = data.weather[0].icon
     console.log("The weather in "+origin+" is "+c.toFixed(2)+"°C")
-    document.getElementById("result").innerHTML =  "<br><img src='http://openweathermap.org/img/wn/"+icon+"@2x.png'>" + "The weather in "+origin+" is "+c.toFixed(2)+"°C"
+    // Use the high-def icon endpoint (@2x)
+document.getElementById("result").innerHTML = `
+    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon">
+    <h2>The weather in ${origin} is ${c.toFixed(1)}°C</h2>
+`;
 }

@@ -1,0 +1,64 @@
+/* Style the main dashboard page */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Beautiful sky blue gradient */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style the Search Area */
+input {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #ff9f43;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #76ff67;
+}
+
+/* 🌟 THE FLEXBOX WEATHER CARD 🌟 */
+#result {
+    background: rgba(255, 255, 255, 0.1); /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+    /* Flexbox settings */
+    display: flex;            /* Activates Flexbox */
+    align-items: center;      /* Centers the icon and text vertically */
+    justify-content: center;  /* Centers everything horizontally */
+    gap: 15px;                /* Puts a clean 15px space between the image and text */
+    
+    min-width: 300px;
+}
+
+/* Make the icon stand out */
+#result img {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
